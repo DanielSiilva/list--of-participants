@@ -13,15 +13,19 @@ export  function Home(){
     
   }
 
+  function handleParticipantRemove(name: string){
+    console.log(`Você deseja remove o ${name}`)
+  }
+
 
   return(
     <View style={styles.container}>
         <Text style={styles.eventName}> 
-          Nome do Evento
+          Confra React Native
         </Text>
 
         <Text style={styles.eventDate}>
-          Sabado, 27 de Novembro de 2022
+          Quarta-feira, 31 de Maio de 2023
         </Text>
 
         <View style={styles.form}>
@@ -36,9 +40,12 @@ export  function Home(){
           </TouchableOpacity>
         </View>
 
-        <Participant name='Daniel Sousa'/>
-        <Participant name='Andreane Cardoso'/>
-        <Participant name='Marlene Sousa'/>
+        <Participant 
+           name='Daniel Sousa'
+           onRemove={()=>handleParticipantRemove('Daniel')}
+        />
+
+    
      </View>
   )
 
