@@ -1,6 +1,7 @@
 import { Text, View, TextInput, TouchableOpacity} from 'react-native'
 
 import {styles} from './styles'
+import { Participant } from '../../components/Participant';
 
 
 
@@ -28,12 +29,16 @@ export  function Home(){
             style={styles.input}
             placeholder='Nome do Participante'
             placeholderTextColor= "#6b6b6b"
-            />
+        />
 
-            <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+        <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
                 <Text style={styles.buttonText}> + </Text>
             </TouchableOpacity>
         </View>
+
+        <Participant />
+        <Participant />
+        <Participant />
     </View>
   )
 
