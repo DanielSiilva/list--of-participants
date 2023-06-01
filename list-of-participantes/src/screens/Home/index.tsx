@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity, ScrollView, FlatList} from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, FlatList} from 'react-native'
 
 import {styles} from './styles'
 import { Participant } from '../../components/Participant';
