@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert} from 'react-native'
 
 import {styles} from './styles'
@@ -7,14 +8,15 @@ import { Participant } from '../../components/Participant';
 
 export  function Home(){
 
-  const participants = [ 'Daniel', 'Marlene', 'Ivaldo', 'Andreane', 'Maiza', 'Aline', 'Lorena', 'Denilson', 'Mae', 'Pai']
+  const [participants, setParticipants] = useState(['Daniel'])
 
 
   function handleParticipantAdd(){
-    if(participants.includes('Daniel')){
+    if(participants.includes('Marlene')){
       return Alert.alert('Partipante Existe', 'Já existe um participante na lista com esse nome')
     }
-    console.log('Clicou no botão');
+    
+    setParticipants(prevState => [...prevState, 'Marlene'])
     
   }
 
